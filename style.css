@@ -46,7 +46,7 @@ body {
     top: 80px;
     left: 40px;
     padding: 20px;
-    font-family: "rubik", sans-serif;
+    font-family: "rubik", sans-serif bold;
 }
 
 .astronaut .heading-box .text {
