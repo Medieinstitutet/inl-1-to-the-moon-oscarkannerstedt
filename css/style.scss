@@ -69,10 +69,11 @@ nav {
     left: o;
     background-color: rgba(248, 240, 240, 0.5);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     visibility: hidden;
+    line-height: 150px;
 }
 input:checked+.menu nav {
     visibility: visible;
@@ -88,8 +89,8 @@ ul {
     height: 100%;
     justify-content: space-evenly;
     text-align: center;
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: bolder;
 }
 
 /*-------------------------------------*/
@@ -116,8 +117,18 @@ ul {
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
-    font-weight: 500 bold;
+    font-weight: bold;
     margin-bottom: 30px;
+}
+
+.arrow-down {
+    content: "\2193";
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    width: 100%;
 }
 
 /*-------------------------------------*/
@@ -233,10 +244,7 @@ blockquote {
     margin-left: 3rem;
     color: white;
     top:-10px;
-       
-        span:first-of-type{
-            
-        }
+
         span:nth-of-type(2){
             top: 15px;
     }
@@ -247,29 +255,29 @@ blockquote {
 
 .link-text{
     text-align: left;
-    color: rgb(233, 119, 138);
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
-    text-decoration: underline;
     padding-top: 20px;
     padding-bottom: 70px;
  }
 
 .arrow {
     font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
 }
+
+.read-more {
+   color: rgb(235, 71, 98);
+   font-family: 'rubik', sans-serif;
+   font-weight: 300;
+   text-decoration: underline;
+}
+
 
 img {
     display: none;
 }
 .gradient-quote {
     display: none; 
-}
-
-.read-more {
-    margin-top: 10px;
-    color: rgb(235, 71, 98); 
-    text-decoration: underline;
 }
 
 .major_tom {
@@ -295,33 +303,104 @@ img {
     .astronaut .heading-box .link:hover span {
         left: 10px;
     }
+
+    .underline-about {
+        text-decoration: underline;
+        text-decoration-color: brown;
+    }
+
     /*-----Second page-----*/
     .full-height.text-page {
         display: flex; 
         gap: 100px; 
     }
+
+    .space-ventures {
+        margin-top: 2rem;
+        margin-left: 3rem;
+        h2{
+            span:first-of-type{
+                z-index: 1;
+                position: relative;
+                font-family: 'Rubik', sans-serif;
+                font-weight: bold;
+                display: block;
+                font-size: 100px;
+            }
+            span:nth-of-type(2){
+                position: relative;
+                top: -100px;
+                left: 25px;
+                color:gray;
+                font-family: 'Times New Roman', Times,;
+                font-weight: bold;
+                font-size: 115px;
+                }
+        }
+     }
     .brown .grey {
         width: 50%;
     }
+
+    .quote {
+        margin-left: 8rem;
+        font-size: 25px;
+    }
+
     .gradient-quote {
-        display: block;
-        background: #CF57A7;
+        display: flex;
+        margin-top: 150px;
+        color: #de466c;
+        opacity: 0.3;
+        background: #fe55ed;
         background: radial-gradient(circle farthest-corner at center center, #CF57A7 0%, #C79FCF 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: 'rubik', sans-serif;
         font-weight: bold;
         font-size: 3rem; 
         text-align: center; 
     }
 
+    .title-text-page {
+        margin-top: 0;
+        margin-left: 3rem;
+        font-family: 'rubik', sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .main-text-3 {
+        margin-top: 70px;
+        margin-right: 4rem;
+        margin-left: 2rem;
+    }
+
+    .main-text-4 {
+        margin-right: 4rem;
+        margin-left: 2rem;
+    }
+
     .major_tom {
-        display: block; 
+        display: block;
         width: 100px; 
         height: auto; 
         float: right;
         transform: rotate(3deg);
+        margin-top: 100px;
+        margin-right: 5rem;
     }
+
+    .arrow-down {
+        display: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+
 }
+
 
 /*-------------------------------------*/
 /*-----------------Dark-mode-----------*/
