@@ -10,7 +10,7 @@
 /*-----------------Meny----------------*/
 /*-------------------------------------*/
 
-button {
+.meny-button {
     width: 35px;
     height: 35px; 
     background: transparent;
@@ -22,7 +22,7 @@ button {
     pointer-events: none;
 }
 
-button .button-span {
+.meny-button .button-span {
     display: block;
     width: 25px;
     height: 3px; 
@@ -68,37 +68,43 @@ nav {
     top: 0;
     left: o;
     background-color: rgba(248, 240, 240, 0.5);
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    text-align: center;
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    visibility: hidden;
-    line-height: 150px;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+        max-width: 60%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: bolder;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+    } 
 }
+
 input:checked+.menu nav {
     visibility: visible;
     opacity: 1;
   }
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bolder;
-}
 
 /*-------------------------------------*/
 /*-----------------Astronaut-----------*/
 /*-------------------------------------*/
 
 .astronaut {
-    background-image: url("../assets/photos/astronaut.jpg");
+    background-image: url("../assets/photos/astronau.jpg");
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -136,7 +142,7 @@ ul {
 /*-------------------------------------*/
 
 .text-page {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/photos/raphael-nogueira-svbDI1Pq30s-unsplas.jpg");
     background-size:cover;
     line-height: 1.5;
 }
@@ -285,6 +291,39 @@ img {
 }
 
 /*-------------------------------------*/
+/*-----------------Cookies-------------*/
+/*-------------------------------------*/
+
+footer {
+    position: fixed; 
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    left: 0;
+    background-color: rgba(3, 7, 30);
+    color: rgba(170, 38, 97);
+    font-size: 0.6rem;
+    font-weight: 300;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    p {
+    text-shadow: 0 0 6px rgba(210, 0, 162);
+    }
+}
+
+.cookies-button {
+    padding: 4px;
+    background-color: rgba(8, 19, 92);
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+/*-------------------------------------*/
 /*-----------------Desktop-------------*/
 /*-------------------------------------*/
 
@@ -304,7 +343,14 @@ img {
         left: 10px;
     }
 
-    .underline-about {
+    a {
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: rgba(210, 0, 162);
+        }
+    }
+
+    .underline {
         text-decoration: underline;
         text-decoration-color: brown;
     }
@@ -383,12 +429,10 @@ img {
 
     .major_tom {
         display: block;
-        width: 100px; 
-        height: auto; 
+        transform: rotate(6deg);
         float: right;
-        transform: rotate(3deg);
-        margin-top: 100px;
-        margin-right: 5rem;
+        margin-left: 10px;
+        margin-top: 10px;
     }
 
     .arrow-down {
@@ -399,8 +443,10 @@ img {
         display: none;
     }
 
+    footer {
+        justify-content: space-between;
+    }
 }
-
 
 /*-------------------------------------*/
 /*-----------------Dark-mode-----------*/
