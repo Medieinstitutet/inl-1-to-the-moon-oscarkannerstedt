@@ -73,6 +73,7 @@ nav {
     text-align: center;
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    visibility: hidden;
     ul {
         margin: 0;
         padding: 0;
@@ -123,7 +124,8 @@ input:checked+.menu nav {
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: bolder;
+    font-family: 'rubik', sans-serif;
     margin-bottom: 30px;
 }
 
@@ -338,6 +340,7 @@ footer {
     }
     .astronaut .heading-box .link span {
         position: relative;
+        left: 0;
         transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
     }
     .astronaut .heading-box .link:hover span {
