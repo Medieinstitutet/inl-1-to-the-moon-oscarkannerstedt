@@ -1,0 +1,464 @@
+/*-------------------------------------*/
+/*------------------Layout------------*/
+/*-------------------------------------*/
+
+.full-height {
+    min-height: 100vh;
+}
+
+/*-------------------------------------*/
+/*-----------------Meny----------------*/
+/*-------------------------------------*/
+
+.meny-button {
+    width: 35px;
+    height: 35px; 
+    background: transparent;
+    border: 0;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.meny-button .button-span {
+    display: block;
+    width: 25px;
+    height: 3px; 
+    background-color: black;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease-in-out;
+}
+
+input {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input:hover + .menu button span:nth-child(2) {
+    left: -5px;
+}
+input:checked+.menu button span {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+input:checked+.menu button span:nth-child(2) {
+    opacity: 0;
+}
+input:checked+.menu button span:nth-child(1) {
+    transform: rotate(45deg);
+}
+input:checked+.menu button span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: o;
+    background-color: rgba(248, 240, 240, 0.5);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    visibility: hidden;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;
+        max-width: 60%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: bolder;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+    } 
+}
+
+input:checked+.menu nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+/*-------------------------------------*/
+/*-----------------Astronaut-----------*/
+/*-------------------------------------*/
+
+.astronaut {
+    background-image: url("../assets/photos/astronau.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.astronaut .heading-box {
+    border: 4px solid black;
+    width: 10rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    padding: 20px;
+}
+
+.astronaut .heading-box .text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'rubik', sans-serif;
+    margin-bottom: 30px;
+}
+
+.arrow-down {
+    content: "\2193";
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    width: 100%;
+}
+
+/*-------------------------------------*/
+/*-----------------Second page---------*/
+/*-------------------------------------*/
+
+.text-page {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/photos/raphael-nogueira-svbDI1Pq30s-unsplas.jpg");
+    background-size:cover;
+    line-height: 1.5;
+}
+.text-page .wrapper {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.title-text-page  {
+        margin-top: 0;
+        position: relative;
+        margin-left: 3rem;
+        font-family: 'Rubik', sans-serif;
+        font-size: 18px;
+        white-space: initial;
+        color: white;
+}
+
+.space-ventures {
+    padding-left: 20px;
+    padding-top: 20px;
+    h2  {
+        margin: 0;
+        padding: 0;
+        span:first-of-type {
+            display: block; 
+            position: relative;
+            z-index: 1;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
+            font-size: 55px; 
+            color: white; 
+        }
+
+        span:nth-of-type(2) {
+            position: relative;
+            top: -70px;
+            left: 25px;
+            z-index: 0;
+            font-family: 'Times New Roman', Times,;
+            font-weight: bold;
+            font-size: 70px;
+            color: grey;
+            
+        }
+    }
+}
+
+.main-text-1 {
+    display:block;
+    margin-left: 3rem;
+    margin-right: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 18px;;
+    text-align: left;
+    color: white;
+}
+
+.main-text-2 {
+    margin-left: 3rem;
+    margin-right: 15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: left;
+    color: white;
+}
+
+blockquote {
+    padding: 0;
+    margin: 20px;
+    position: relative;
+}
+
+.quote {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.3rem;
+    font-weight: italic;
+    font-weight: 300;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 2.25rem;
+    top: 20px;
+    text-align: left;
+    color: rgb(223, 223, 223);
+   }
+
+.main-text-3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top:0;
+    margin-right: 20px;
+    margin-left: 3rem;
+    color: white;
+}
+
+.main-text-4 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-left: 3rem;
+    color: white;
+    top:-10px;
+
+        span:nth-of-type(2){
+            top: 15px;
+    }
+        span:nth-of-type(3) {
+            top: 15px;
+        }
+}
+
+.link-text{
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 70px;
+ }
+
+.arrow {
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.read-more {
+   color: rgb(235, 71, 98);
+   font-family: 'rubik', sans-serif;
+   font-weight: 300;
+   text-decoration: underline;
+}
+
+
+img {
+    display: none;
+}
+.gradient-quote {
+    display: none; 
+}
+
+.major_tom {
+    display: none;
+}
+
+/*-------------------------------------*/
+/*-----------------Cookies-------------*/
+/*-------------------------------------*/
+
+footer {
+    position: fixed; 
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    left: 0;
+    background-color: rgba(3, 7, 30);
+    color: rgba(170, 38, 97);
+    font-size: 0.6rem;
+    font-weight: 300;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    p {
+    text-shadow: 0 0 6px rgba(210, 0, 162);
+    }
+}
+
+.cookies-button {
+    padding: 4px;
+    background-color: rgba(8, 19, 92);
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+/*-------------------------------------*/
+/*-----------------Desktop-------------*/
+/*-------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+    /*-----First page-----*/
+    .astronaut .heading-box {
+        width: 15rem;
+    }
+    .astronaut .heading-box .link{
+        text-align: right;
+    }
+    .astronaut .heading-box .link span {
+        position: relative;
+        left: 0;
+        transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    .astronaut .heading-box .link:hover span {
+        left: 10px;
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: rgba(210, 0, 162);
+        }
+    }
+
+    .underline {
+        text-decoration: underline;
+        text-decoration-color: brown;
+    }
+
+    /*-----Second page-----*/
+    .full-height.text-page {
+        display: flex; 
+        gap: 100px; 
+    }
+
+    .space-ventures {
+        margin-top: 2rem;
+        margin-left: 3rem;
+        h2{
+            span:first-of-type{
+                z-index: 1;
+                position: relative;
+                font-family: 'Rubik', sans-serif;
+                font-weight: bold;
+                display: block;
+                font-size: 100px;
+            }
+            span:nth-of-type(2){
+                position: relative;
+                top: -100px;
+                left: 25px;
+                color:gray;
+                font-family: 'Times New Roman', Times,;
+                font-weight: bold;
+                font-size: 115px;
+                }
+        }
+     }
+    .brown .grey {
+        width: 50%;
+    }
+
+    .quote {
+        margin-left: 8rem;
+        font-size: 1.5rem;
+     }
+        
+    .gradient-quote {
+        display: flex;
+        margin-top: 150px;
+        color: #de466c;
+        opacity: 0.5;
+        background: #fe55ed;
+        background: radial-gradient(circle farthest-corner at center center, #CF57A7 0%, #C79FCF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'rubik', sans-serif;
+        font-weight: bold;
+        font-size: 3rem; 
+        text-align: center; 
+    }
+
+    .title-text-page {
+        margin-top: 0;
+        margin-left: 3rem;
+        font-family: 'rubik', sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .main-text-3 {
+        margin-top: 70px;
+        margin-right: 4rem;
+        margin-left: 2rem;
+    }
+
+    .main-text-4 {
+        margin-right: 4rem;
+        margin-left: 2rem;
+    }
+
+    .major_tom {
+        display: block;
+        transform: rotate(6deg);
+        float: right;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .arrow-down {
+        display: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    footer {
+        justify-content: space-between;
+        font-size: 12px;
+    }
+}
+
+/*-------------------------------------*/
+/*-----------------Dark-mode-----------*/
+/*-------------------------------------*/
+
+@media (prefers-color-scheme: dark) {
+    .astronaut .heading-box .link {
+        color: red;
+    }
+}
